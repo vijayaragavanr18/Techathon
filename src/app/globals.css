@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer base {
+  :root {
+    /* Dark Blue/White Theme */
+    --background: 221 39% 11%; /* Dark Blue */
+    --foreground: 210 40% 98%; /* Near White */
+
+    --card: 221 39% 15%; /* Slightly Lighter Dark Blue */
+    --card-foreground: 210 40% 98%;
+
+    --popover: 221 39% 11%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%; /* Near White for elements on dark bg */
+    --primary-foreground: 221 39% 11%; /* Dark Blue for text on primary */
+
+    --secondary: 221 39% 25%; /* Mid Blue */
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 221 39% 20%;
+    --muted-foreground: 210 40% 60%; /* Grayish White */
+
+    --accent: 195 53% 79%; /* Light Blue */
+    --accent-foreground: 221 39% 11%; /* Dark Blue for text on accent */
+
+    --destructive: 0 72% 51%; /* Adjusted Red for contrast */
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 221 39% 25%; /* Mid Blue */
+    --input: 221 39% 25%; /* Mid Blue */
+    --ring: 195 53% 79%; /* Light Blue */
+
+    --chart-1: 195 53% 79%; /* Light Blue */
+    --chart-2: 210 40% 98%; /* Near White */
+    --chart-3: 221 39% 50%; /* Brighter Mid Blue */
+    --chart-4: 195 40% 60%; /* Desaturated Light Blue */
+    --chart-5: 210 30% 80%; /* Lighter Grayish White */
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 221 39% 9%; /* Very Dark Blue */
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 195 53% 79%; /* Light Blue for active/primary */
+    --sidebar-primary-foreground: 221 39% 11%;
+    --sidebar-accent: 221 39% 20%; /* Hover/Accent */
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 221 39% 25%;
+    --sidebar-ring: 195 53% 79%;
+  }
+
+  .dark {
+    /* Ensure dark theme variables are applied even without explicit .dark class */
+    --background: 221 39% 11%;
+    --foreground: 210 40% 98%;
+    --card: 221 39% 15%;
+    --card-foreground: 210 40% 98%;
+    --popover: 221 39% 11%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 221 39% 11%;
+    --secondary: 221 39% 25%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 221 39% 20%;
+    --muted-foreground: 210 40% 60%;
+    --accent: 195 53% 79%;
+    --accent-foreground: 221 39% 11%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 221 39% 25%;
+    --input: 221 39% 25%;
+    --ring: 195 53% 79%;
+    --chart-1: 195 53% 79%;
+    --chart-2: 210 40% 98%;
+    --chart-3: 221 39% 50%;
+    --chart-4: 195 40% 60%;
+    --chart-5: 210 30% 80%;
+    --sidebar-background: 221 39% 9%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 195 53% 79%;
+    --sidebar-primary-foreground: 221 39% 11%;
+    --sidebar-accent: 221 39% 20%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 221 39% 25%;
+    --sidebar-ring: 195 53% 79%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+     /* Ensure dark theme is always applied */
+    color-scheme: dark;
+  }
+}
